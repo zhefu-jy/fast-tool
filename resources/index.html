@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fast Tool - 快捷导航</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <!-- ========== Header ========== -->
+    <header id="app-header">
+      <div class="header-left">
+        <span class="app-logo">🚀</span>
+        <h1 class="app-title">Fast Tool</h1>
+      </div>
+      <div class="header-center">
+        <div class="search-box">
+          <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <input type="text" id="search-input" placeholder="搜索条目... (Ctrl+F)" autocomplete="off">
+          <button id="search-clear" class="search-clear" style="display:none">✕</button>
+        </div>
+      </div>
+      <div class="header-right">
+        <button id="theme-toggle-btn" class="theme-toggle-btn" title="切换主题">🌙</button>
+        <span class="header-hint">快捷导航工具</span>
+      </div>
+    </header>
+
+    <!-- ========== Main Content ========== -->
+    <div id="main-content">
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div class="sidebar-header">
+          <h2>分类</h2>
+        </div>
+        <div class="sidebar-scroll">
+          <ul id="category-list">
+            <!-- Dynamic categories rendered by JS -->
+          </ul>
+        </div>
+        <button id="add-category-btn" class="add-btn">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+          </svg>
+          <span>新建分类</span>
+        </button>
+      </aside>
+
+      <!-- Content Area -->
+      <main id="content-area">
+        <div id="content-header">
+          <h2 id="current-category-name">Fast Tool</h2>
+          <span id="item-count" class="item-count"></span>
+        </div>
+        <div id="items-grid">
+          <!-- Dynamic item cards rendered by JS -->
+        </div>
+        <button id="add-item-btn" class="add-item-btn" style="display:none">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+          </svg>
+          <span>添加条目</span>
+        </button>
+      </main>
+    </div>
+  </div>
+
+  <!-- ========== Modal Overlay ========== -->
+  <div id="modal-overlay" class="modal-overlay" style="display:none">
+    <div id="modal" class="modal">
+      <div class="modal-header">
+        <h3 id="modal-title">标题</h3>
+        <button id="modal-close" class="modal-close">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+      <div id="modal-body" class="modal-body">
+        <!-- Dynamic form content -->
+      </div>
+      <div class="modal-footer">
+        <button id="modal-cancel" class="btn btn-secondary">取消</button>
+        <button id="modal-confirm" class="btn btn-primary">确定</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== Emoji Picker ========== -->
+  <div id="emoji-picker" class="emoji-picker" style="display:none">
+    <!-- Dynamic emoji grid rendered by JS -->
+  </div>
+
+  <!-- ========== Context Menu ========== -->
+  <div id="context-menu" class="context-menu" style="display:none">
+    <ul id="context-menu-list"></ul>
+  </div>
+
+  <!-- ========== Toast Notification ========== -->
+  <div id="toast" class="toast"></div>
+
+  <!-- ========== Scripts ========== -->
+  <script src="js/neutralino.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

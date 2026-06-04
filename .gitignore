@@ -1,0 +1,6 @@
+node_modules/
+dist/
+bin/
+.tmp/
+neutralinojs.log
+data.json

@@ -1,0 +1,46 @@
+{
+  "applicationId": "com.fasttool.app",
+  "defaultMode": "window",
+  "port": 0,
+  "documentRoot": "/resources/",
+  "enableServer": true,
+  "enableNativeAPI": true,
+  "tokenSecurity": "one-time",
+  "url": "/",
+  "nativeAllowList": [
+    "app.*",
+    "os.*",
+    "filesystem.*",
+    "storage.*",
+    "window.*",
+    "events.*",
+    "computer.*",
+    "clipboard.*"
+  ],
+  "modes": {
+    "window": {
+      "title": "Fast Tool - 快捷导航",
+      "width": 1100,
+      "height": 700,
+      "minWidth": 800,
+      "minHeight": 500,
+      "icon": "/resources/icons/appIcon.png",
+      "fullScreen": false,
+      "alwaysOnTop": false,
+      "enableInspector": false,
+      "borderless": false,
+      "maximize": false,
+      "resizable": true,
+      "hidden": false,
+      "maximizable": true,
+      "center": true
+    }
+  },
+  "cli": {
+    "binaryName": "fast-tool",
+    "resourcesPath": "/resources/",
+    "clientLibrary": "/resources/js/neutralino.js",
+    "binaryVersion": "nightly",
+    "clientVersion": "nightly"
+  }
+}
