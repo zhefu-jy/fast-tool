@@ -1,6 +1,16 @@
 node_modules/
 dist/
-bin/
+
+# Neutralinojs binaries - keep only Windows, exclude others
+bin/.tmp/
+bin/neutralino-linux_arm64
+bin/neutralino-linux_armhf
+bin/neutralino-linux_x64
+bin/neutralino-mac_arm64
+bin/neutralino-mac_universal
+bin/neutralino-mac_x64
+bin/neutralinojs.log
+
 .tmp/
 neutralinojs.log
 data.json
